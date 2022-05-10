@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>AFRS Job Match</title>
+
+        <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/css/ionicons.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="icon" href="img/usaf-hap.ico">
+    </head>
+
+
+    <body>
+
+        <section id="sec-intro" class="section-1">
+            <div class="container col-sm-5">
+                <h1>AFRS Job Match</h1>
+
+                <p>Welcome. This tool is intended to save you time by matching jobs to recruits. It requires two files:</p>
+                <ul>
+                    <li>&bull; <b>Q&amp;W file from AFRISS</b></li>
+                    <li>&bull; <b>Open Jobs file from TTMS</b></li>
+                </ul>
+                <p>
+                    Recruits will only be assigned to jobs which they are available to fill based on their EAD preferences, and which they have listed in their preferences. This application runs entirely on your local computer and does not upload or download any data. In other words, there is no concern over PII or other data transfer.
+                </p>
+            </div>
+        </section>
+
+
+
+        <section id="sec-file-browse" class="section-2">
+
+            <div class="div-form">
+                <p id="p-ready"><i class="ion-checkmark-round icon-md" id="icon-ready"></i> All required files loaded.</p>
+                <form id="form-file-upload" method="post" enctype="multipart/form-data">
+                    <label for="file-uploads">
+                        <i class="ion-plus-circled icon-md icon-click" id="icon-add-files"></i>
+                        <p id="p-browse">Browse for files...</p>
+                    </label>
+                    <input type="file" id="file-uploads" name="file-uploads" accept=".csv, .xlsx, .xls" multiple>
+                </form>
+
+
+                <table id="table-files" class="table">
+                    <!-- This table will be filled with jQuery -->
+                </table>
+
+            </div>
+
+
+            <div class="container text-center">
+                <button type="button" onclick="startProgram()" id="btn-start" class="btn btn-success" disabled>Run Job Match</button>
+            </div>
+
+        </section>
+
+
+
+        <section id="sec-results">
+
+            <section class="section-1">
+                <h2>Match Results</h2>
+                <div class="container">
+                    <div class="card-deck text-center" id="card-deck-scores">
+                        <!-- The cards here will be filled in using jQuery within the job-match.js file -->
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="results-buttons" class="section-2">
+                <div class="container text-center">
+                    <button onclick="writeXlsxCrappy(jobsTable, qwTable, 'match_results.xlsx')" class="btn btn-primary">Save results</button>
+                    <button onclick="endProgram()" class="btn btn-secondary">Start Over</button>
+                </div>
+            </section>
+
+
+            <section class="section-1">
+                <div class="container table-container" id="container-jobs-table"></div>
+                <div class="container table-container" id="container-qw-table"></div>
+            </section>
+
+        </section>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <span>This app and the job matching algorithm are free and open source.</span>
+                    </div>
+
+                    <div class="col">
+                        <ul class="ul-footer">
+                            <li><a href="https://github.com/ganders3/jmt" target="_blank"><i class="ion-social-github icon-sm icon-footer"></i><span>Job Match Tool on Github</span></a></li>
+                            <li><a href="mailto:email@host.com"><i class="ion-email icon-sm icon-footer"></i>afrs.jm@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul class="ul-footer">
+                            <li><a href="https://afrisstf.csd.disa.mil/afrisstf/" target="_blank"><img src="img/logo-afriss.png" alt="AFRISS-TF" class="footer-logo"></a></li>
+                            <br>
+                            <li><a href="https://jm.ttms.us.af.mil/plateau/admin/login.jsp" target="_blank"><img src="img/logo-ttms.png" alt="TTMS" class="footer-logo"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- xxxxxxxxxxxxxxxxxxxx Scripts xxxxxxxxxxxxxxxxxxxxxxxxxx -->
+        <script src="vendor/js/d3.min.js"></script>
+        <script src="vendor/js/jquery-3.3.1.min.js"></script>
+        <script src="vendor/js/xlsx.full.min.js"></script>
+
+        <script src="functions.js"></script>
+        <script src="app.js"></script>
+        <script src="job-match.js"></script>
+
+    </body>
+
+</html>

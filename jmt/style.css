@@ -1,0 +1,205 @@
+body {
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto -5rem;
+	padding-bottom: 8rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+
+.section-1, .section-2 {
+	padding: 2rem 0rem;
+}
+
+.section-1 {
+	background-color: #fff;
+}
+
+.section-2 {
+	background-color: #eee;
+}
+
+#sec-intro {
+	text-align: justify;
+}
+
+#sec-file-browse {
+	text-align: center;
+	align-content: center;
+}
+
+/*------------------------buttons---------------------*/
+.btn, .btn-primary, .btn-secondary {
+	display: inline;
+	cursor: pointer;
+}
+
+.btn-disabled {
+	cursor: not-allowed;
+	opacity: 0.4;
+}
+
+
+/*------------------------------cards---------------------*/
+.card-deck {
+	margin: 1rem 2rem;
+	justify-content: center;
+}
+
+#card-deck-files .card {
+	max-width: 10rem;
+	min-width: 10rem;
+}
+
+.card {
+	/*width: -moz-min-content;*/
+}
+
+
+/*------------------------forms-----------------------*/
+.div-form {
+	margin-bottom: 2rem;
+}
+
+#form-file-upload, #table-files {
+	width: 50%;
+	min-width: 15rem;
+}
+
+#form-file-upload {
+	padding: 0;
+	display: inline-block;
+	background-color: #fff;
+	border: 2px dashed #55a7ff;
+	cursor: pointer;
+}
+
+#form-file-upload:hover {
+	border: 2px dashed #007bff;
+}
+
+#form-file-upload label, input {
+	width: 100%;
+	margin: 0;
+	cursor: pointer;
+}
+
+#form-file-upload input {
+	height: 0rem;
+	opacity: 0;
+}
+
+#p-browse {
+	opacity: 0.6;
+}
+
+/*------------------------------icons-----------------------*/
+.icon-main {
+	color: #007bff;
+}
+
+.icon-sm {
+	font-size: 1.5rem;
+}
+
+.icon-md {
+	font-size: 3rem;
+}
+
+.icon-lg {
+	font-size: 4rem;
+}
+
+.icon-footer {
+	margin-right: 1rem;
+}
+
+.icon-click {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.icon-click:hover {
+	opacity: 1;
+}
+
+
+#icon-add-files, #icon-ready {
+	color: #28a745;
+	/*opacity: 0.65;*/
+}
+
+.ion-close-round {
+	color: #d9534f;
+}
+
+
+/*------------------------footer---------------------------*/
+.footer {
+	width: 100%;
+	height: auto;
+	padding: 1rem 0 0.5rem 0;
+	bottom: 0;
+	position: fixed;
+	background-color: #333;
+	color: #fff;
+	font-size: 1rem;
+}
+
+.footer-logo {
+	max-width: 9rem;
+	min-width: 9rem;
+	border-radius: 0.25rem;
+	opacity: 0.65;
+}
+
+.footer-logo:hover {
+	opacity: 1;
+}
+
+.ul-footer li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.ul-footer a:hover {
+	color: #007bff;
+}
+
+
+
+/*-------------------tables--------------------*/
+.table-container {
+	margin-bottom: 2rem;
+}
+
+.td-left{
+	text-align: left;
+}
+
+.td-right {
+	text-align: right;
+}
+
+#table-files {
+	margin: auto;
+	background-color: #fff;
+}
+
+
+
+
+.img-file-thumbnail {
+	height: 2rem;
+}

@@ -1,0 +1,102 @@
+* {
+	font-family: sans-serif;
+}
+
+@media only screen and (min-width: 601px) {
+	body {
+		margin: 0 25%;
+		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		margin: 0 5%;
+		font-size: 1.25em;
+	}
+}
+
+li {
+	margin: 1em;
+}
+
+a {
+    color: #3c73df;
+}
+
+a:visited {
+    color: #769de9;
+}
+
+.body-dark {
+    background-color: #0a1115;
+    color:  white;
+}
+
+.header {    
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: #7caac4;
+	margin-top: 3em;
+	padding: 0.25em;
+	text-align: center;
+}
+
+.headtext2 {
+    color: #7caac4;
+}
+
+.footer-dark {
+    background-color: #335c74;
+	margin-top: 3em;
+	padding: 0.25em;
+	text-align: center;
+}
+
+.headtext2-dark {
+    color: #335c74;
+}
+
+.site-title {
+	text-decoration: none;
+}
+
+.headtext1, .headtext2 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.headtext1 {
+    color: black;
+}
+
+.headtext1-dark {
+    color: white;
+}
+
+.button, .button-dark {
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    background-color: white;
+    content: url('img/icon-moon.svg');
+}
+
+.button-dark {
+	background-color: #0a1115;
+}
+
+.button img, .button-dark img {
+    height: 3em;
+}
+
+.button-dark img {
+    content: url('img/icon-sun.svg');
+    filter: invert(1);
+}
